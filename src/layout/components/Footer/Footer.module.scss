@@ -1,0 +1,27 @@
+.container {
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: toRem(15);
+	padding-block: toRem(20);
+	background-color: var(--color-footer-bg);
+	text-align: center;
+	border-top: 1px solid var(--color-border);
+	transition:
+		background-color 0.3s ease,
+		border-color 0.3s ease;
+	@include adaptiveValue("font-size", 18, 14);
+	color: var(--color-text-muted);
+	transition:
+		background-color var(--transition-base),
+		color var(--transition-base),
+		border-color var(--transition-base); ;
+		will-change: background-color, color, border-color;
+
+	span {
+		color: var(--color-primary);
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+}
+
+

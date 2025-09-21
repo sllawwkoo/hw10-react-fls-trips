@@ -1,0 +1,36 @@
+.selections {
+	flex: 1 1 auto;
+	display: flex;
+	// align-items: center;
+	justify-content: center;
+	background-color: var(--color-home-bg);
+	transition:
+		background-color var(--transition-base),
+		color var(--transition-base);
+	will-change: background-color, color;
+}
+
+.container {
+	width: 100%;
+	max-width: toRem(1200);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+	@include adaptiveValue("padding-top", 50, 30);
+	@include adaptiveValue("padding-bottom", 50, 30);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+.title {
+	@include adaptiveValue("font-size", 56, 30);
+	color: var(--color-primary);
+	text-align: center;
+}
+
+.subtitle {
+	@include adaptiveValue("font-size", 26, 18);
+	font-weight: 500;
+	color: var(--color-text-muted);
+}

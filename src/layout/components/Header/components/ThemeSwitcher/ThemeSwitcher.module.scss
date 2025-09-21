@@ -1,0 +1,45 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// width: toRem(60);
+	// height: toRem(34);
+	border-radius: toRem(20);
+	background-color: var(--color-header-bg);
+	cursor: pointer;
+	position: relative;
+	padding: toRem(2);
+	border: toRem(2) solid transparent;
+	transition: border var(--transition-base);
+	will-change: border;
+	
+
+	@media (any-hover: hover) {
+		&:hover {
+			border: toRem(2) solid var(--color-primary);
+		}
+	}
+
+	// &:focus {
+	// 	border: toRem(2) solid var(--color-primary);
+	// }
+}
+
+.themeToggleSlider {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--color-hesdr-bg);
+	transition: all var(--transition-base);
+	// transform: translateX(0);
+
+	// якщо темна тема — зсуваємо вправо
+	[data-theme="dark"] & {
+		// transform: translateX(40px);
+		background-color: var(--color-header-bg);
+	}
+}
+

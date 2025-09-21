@@ -1,0 +1,33 @@
+.button {
+	padding: toRem(10) toRem(20);
+	border-radius: toRem(8);
+	border: 2px solid var(--color-primary);
+	background-color: transparent;
+	color: var(--color-primary);
+	font-size: toRem(16);
+	cursor: pointer;
+	transition: background-color var(--transition-base), color var(--transition-base);
+	will-change: background-color, color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-primary);
+			color: var(--color-bg);
+		}
+	}
+}
+
+.active {
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+	border: toRem(2) solid var(--color-primary);;
+	transition: background-color var(--transition-base), color var(--transition-base);
+	will-change: background-color, color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: transparent;
+			color: var(--color-primary);
+		}
+	}
+}

@@ -1,0 +1,92 @@
+.home {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-home-bg);
+	text-align: center;
+	transition:
+		background-color var(--transition-base),
+		color var(--transition-base);
+		will-change: background-color, color;
+}
+
+.container {
+	max-width: toRem(1200);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+	@include adaptiveValue("padding-bottom", 150, 100);
+}
+
+.title {
+	font-family: var(--font-decor);
+	@include adaptiveValue("font-size", 56, 25);
+	color: var(--color-text);
+
+	span {
+		color: var(--color-primary);
+	}
+}
+
+.subtitle {
+	@include adaptiveValue("font-size", 24, 16);
+	color: var(--color-text-muted);
+	margin-top: toRem(15);
+	margin-bottom: toRem(30);
+}
+
+.actions {
+	display: flex;
+	justify-content: center;
+	gap: toRem(25);
+	flex-wrap: wrap;
+	@include adaptiveValue("font-size", 18, 14);
+
+	& > * {
+		flex-basis: 35%;
+
+		@media (max-width: $mobileSmall) {
+			flex-basis: 80%;
+		}
+	}
+}
+
+.btnFirst {
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+	border: toRem(2) solid var(--color-primary);
+	padding: toRem(12) toRem(24);
+	border-radius: toRem(8);
+	font-weight: 500;
+	transition:
+		color var(--transition-base),
+		background-color var(--transition-base);
+	will-change: color, background-color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: transparent;
+			color: var(--color-primary);
+		}
+	}
+}
+
+.btnSecondary {
+	background-color: transparent;
+	border: toRem(2) solid var(--color-primary);
+	color: var(--color-primary);
+	padding: toRem(12) toRem(24);
+	border-radius: toRem(8);
+	font-weight: 500;
+	transition:
+		color var(--transition-base),
+		background-color var(--transition-base);
+	will-change: color, background-color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-primary);
+			color: var(--color-bg);
+		}
+	}
+}

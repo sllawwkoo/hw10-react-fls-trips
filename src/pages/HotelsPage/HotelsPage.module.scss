@@ -1,0 +1,27 @@
+.hotels {
+	padding: toRem(40) 0;
+	background: var(--color-home-bg);
+	transition:
+		background-color var(--transition-base),
+		color var(--transition-base);
+		will-change: background-color, color;
+
+	.container {
+		max-width: toRem(1200);
+		margin-inline: auto;
+		padding-inline: toRem(15);
+	}
+
+	.title {
+		@include adaptiveValue("font-size", 38, 32);
+		margin-bottom: toRem(30);
+		text-align: center;
+		color: var(--color-text);
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: toRem(20);
+	}
+}

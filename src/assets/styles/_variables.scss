@@ -1,0 +1,65 @@
+:root {
+	// Шрифти
+	--font-roboto: "Roboto", sans-serif;
+	--font-shantell: "Shantell Sans", sans-serif;
+	--font-merriweather: "Merriweather", sans-serif;
+	--font-ubuntu: "Ubuntu", sans-serif;
+
+	/* === Layout === */
+	--transition-fast: 0.2s ease-in-out;
+	--transition-base: 0.3s ease-in-out;
+
+	/* === Shared Colors (для обох тем) === */
+	--color-success: #4caf50;
+	--color-warning: #ff9800;
+	--color-error: #f44336;
+	--color-info: #2196f3;
+
+	/* === Light Theme (default) === */
+	--color-bg: #ffffff;
+	--color-bg-secondary: #f7f9fc;
+	--color-text: #905e26;
+	--color-text-muted: #666666;
+	--color-border: #afafaf;
+	--color-primary: #ff7a1a;
+	--color-primary-hover: #e66b10;
+	--color-card-bg: #ffffff;
+	--color-header-bg: #d8d8d8;
+	--color-footer-bg: #f0f2f5;
+	--color-box-shadow: rgba(0, 0, 0, 0.15);
+
+	/* === Navigation / Menu Colors === */
+	--color-menu-bg: var(--color-header-bg);
+	--color-menu-link: var(--color-text);
+	--color-menu-link-hover: var(--color-primary);
+	--color-menu-link-active: var(--color-primary-hover);
+	--color-burger: var(--color-text);
+
+	/* === Home Page === */
+	--color-home-bg: #deb887;
+}
+
+/* === Dark Theme Override === */
+[data-theme="dark"] {
+	--color-bg: #121212;
+	--color-bg-secondary: #1e1e1e;
+	--color-text: #f5f5f5;
+	--color-text-muted: #bbbbbb;
+	--color-border: #333333;
+	--color-primary: #ffb84d;
+	--color-primary-hover: #ffcc80;
+	--color-card-bg: #1e1e1e;
+	--color-header-bg: #1a1a1a;
+	--color-footer-bg: #161616;
+	--color-box-shadow: rgba(255, 255, 255, 0.15);
+
+	/* === Navigation / Menu Colors === */
+	--color-menu-bg: var(--color-header-bg);
+	--color-menu-link: var(--color-text);
+	--color-menu-link-hover: var(--color-primary);
+	--color-menu-link-active: var(--color-primary-hover);
+	--color-burger: var(--color-text);
+
+	/* === Home Page === */
+	--color-home-bg: #26242f;
+}
