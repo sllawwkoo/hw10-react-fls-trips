@@ -1,5 +1,7 @@
 # React + Vite
 
+[Deploy hw10-react-fls-trips with Vite](https://hw10-react-fls-trips.netlify.app/)
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
